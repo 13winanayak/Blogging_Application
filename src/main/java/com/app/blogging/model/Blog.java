@@ -1,6 +1,7 @@
 package com.app.blogging.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -25,6 +26,7 @@ public class Blog {
 
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = false)
+    @JsonIgnoreProperties({"blogs", "email", "password"})
     private User author;  // Relationship with User
 
     private LocalDateTime createdAt = LocalDateTime.now();

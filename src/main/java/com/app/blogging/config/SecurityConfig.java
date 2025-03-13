@@ -31,7 +31,7 @@ public class SecurityConfig {
                 .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/**").authenticated()  // Protect API routes
-                        .requestMatchers("/auth/signin", "/auth/signup", "/blogs/create").permitAll()  // Allow all other routes
+                        .requestMatchers("/auth/signin", "/auth/signup", "/blogs/**", "/chats/**").permitAll()  // Allow all other routes
                 )
                 .addFilterBefore(new JwtTokenValidator(), BasicAuthenticationFilter.class) // Add JWT validation filter
                 .csrf(csrf -> csrf.disable()) ; // Disable CSRF (safe for REST APIs)
