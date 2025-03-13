@@ -3,14 +3,14 @@ This is a backend API for a blogging platform built using Spring Boot, Spring Da
 
 
 
-Features :-
+Features :-<br>
 JWT-based authentication for secure access.
 CRUD operations for blog management.
 Pagination support for fetching all blogs.
 PostgreSQL/MySQL integration using Spring Data JPA.
 
 
-Tech Stack
+Tech Stack<br>
 Backend: Spring Boot, Spring Data JPA
 Database: MySQL
 Security: Spring Security with JWT Authentication
@@ -19,38 +19,38 @@ Build Tool: Maven
 
 
 
-API Endpoints :-
+API Endpoints :-<br>
 Authentication
 
-Register a new user
+Register a new user<br>
 POST /auth/signup
 
 
-Login and get JWT token
+Login and get JWT token<br>
 POST/auth/signin
 
 
 Blog APIs (Require JWT Authentication)
 
- createBlog
+ createBlog<br>
 POST /api/blogs/create
 
 
-getAllBlogs
+getAllBlogs<br>
  GET /api/blogs/all
 
 
-updateBlog
+updateBlog<br>
 Put /api/blogs/{blogId}
 
 
-deleteBlog
+deleteBlog<br>
 Delete  /api/blogs/{blogId}
 
 
-pagging
+pagging<br>
 GET /api/blogs/paginated
 
 
-open ai chat
+open ai chat<br>
 Post /api/chats/{blog_id}/bot
